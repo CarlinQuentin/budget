@@ -5,6 +5,7 @@ class TotalsCard extends React.Component {
     render(){
       return(
         <div className='total-card'>
+          <div className={"totals-content"}>
           <h3>Income</h3> 
             <input
                 onKeyPress={(event) => {
@@ -12,9 +13,10 @@ class TotalsCard extends React.Component {
                   event.preventDefault();
                 }
               }}
-          type="number" name="totalIncome" placeholder="Income" onChange={this.props.handleChange}/>
-          <ul>Monthly Income : ${this.props.totalIncome}</ul>
-          <ul>Not Accounted For : ${this.props.notAccountedFor}</ul>
+           type="number" name="totalIncome" placeholder="Income" onChange={this.props.handleChange}/>
+            <h4>Monthly Income : ${this.props.totalIncome}</h4>
+            <h4>Not Accounted For : ${this.props.notAccountedFor}</h4>
+          </div>
         </div>
       )
     }

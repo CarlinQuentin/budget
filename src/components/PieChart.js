@@ -2,7 +2,7 @@ import React from 'react';
 import { Chart } from "react-google-charts";
 import '../App.css';
 
-class Display extends React.Component {
+class PieChart extends React.Component {
     render(){
       const data = [
         ["Budget", "Cost"],
@@ -35,4 +35,4 @@ class Display extends React.Component {
       );
     };
   }
-export default Display;
+export default PieChart;

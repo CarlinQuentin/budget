@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import TotalsCard from './components/TotalsCard';
-import Display from './components/Display';
+import PieChart from './components/PieChart';
 import Card from './components/Card';
 import Header from './components/Header';
 
@@ -32,16 +32,23 @@ import Header from './components/Header';
     }
 
   handleChange = (e) => {
-    const key = [e.target.name]
-    this.setState({
-      [key]: parseInt(e.target.value),
-    }, this.updateNotAccountedFor)
+    if(e.target.value === ""){
+      const key = [e.target.name]
+      this.setState({
+        [key]: parseInt(0),
+      }, this.updateNotAccountedFor)
+    }else{
+      const key = [e.target.name]
+      this.setState({
+        [key]: parseInt(e.target.value),
+      }, this.updateNotAccountedFor)
+    }
   }  
 
     render(){
       return (
         <div className="App">
-            <Header/>
+          <Header/>
             <div className={"totals-card"}>
               <TotalsCard
                 totalIncome={this.state.totalIncome}
@@ -50,32 +57,32 @@ import Header from './components/Header';
               />
             </div>
             <div className={"display-card"}>
-          <Display
-              rent={this.state.rent}
-              loans={this.state.loans}
-              utilites={this.state.utilites}
-              giving={this.state.giving}
-              gas={this.state.gas}
-              groceries={this.state.groceries}
-              carMaintainance={this.state.carMaintainance}
-              miscilanious={this.state.miscilanious}
-              personalSpending={this.state.personalSpending}
-              saving={this.state.saving}
+              <PieChart
+                rent={this.state.rent}
+                loans={this.state.loans}
+                utilites={this.state.utilites}
+                giving={this.state.giving}
+                gas={this.state.gas}
+                groceries={this.state.groceries}
+                carMaintainance={this.state.carMaintainance}
+                miscilanious={this.state.miscilanious}
+                personalSpending={this.state.personalSpending}
+                saving={this.state.saving}
               />
-        </div>
-          <Card
-            rent={this.state.rent}
-            loans={this.state.loans}
-            utilites={this.state.utilites}
-            giving={this.state.giving}
-            gas={this.state.gas}
-            groceries={this.state.groceries}
-            carMaintainance={this.state.carMaintainance}
-            miscilanious={this.state.miscilanious}
-            personalSpending={this.state.personalSpending}
-            saving={this.state.saving}
-            handleChange={this.handleChange}
-          />
+             </div>
+              <Card
+                rent={this.state.rent}
+                loans={this.state.loans}
+                utilites={this.state.utilites}
+                giving={this.state.giving}
+                gas={this.state.gas}
+                groceries={this.state.groceries}
+                carMaintainance={this.state.carMaintainance}
+                miscilanious={this.state.miscilanious}
+                personalSpending={this.state.personalSpending}
+                saving={this.state.saving}
+                handleChange={this.handleChange}
+              />
         </div>
   );
 }

@@ -25,6 +25,10 @@ code {
   margin: auto;
 }
 
+.totals-content{
+  align-items: center;
+  margin: auto;
+}
 
 .main-card {
   box-shadow: 1px 1px 10px 1px;
@@ -68,4 +72,5 @@ code {
   margin-top: 21%;
   margin-left: 8%;
 }
+
 

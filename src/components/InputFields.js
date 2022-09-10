@@ -77,7 +77,7 @@ class InputFields extends React.Component {
                     event.preventDefault();
                   }
                 }}
-            type="number" name="personalSpending" placeholder="Personal Spending" nChange={this.props.handleChange}/>
+            type="number" name="personalSpending" placeholder="Personal Spending" onChange={this.props.handleChange}/>
             <h3>Saving</h3>
                <input
                   onKeyPress={(event) => {
