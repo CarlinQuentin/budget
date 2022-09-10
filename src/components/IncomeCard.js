@@ -4,7 +4,6 @@ import '../App.css';
 class TotalsCard extends React.Component {
     render(){
       return(
-        <div className='total-card'>
           <div className={"totals-content"}>
           <h3>Income</h3> 
             <input
@@ -17,7 +16,6 @@ class TotalsCard extends React.Component {
             <h4>Monthly Income : ${this.props.totalIncome}</h4>
             <h4>Not Accounted For : ${this.props.notAccountedFor}</h4>
           </div>
-        </div>
       )
     }
   }

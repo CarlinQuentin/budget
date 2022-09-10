@@ -5,7 +5,6 @@ class InputFields extends React.Component {
     render(){
         return(
           <form>
-            <div className={"input-fields"}>
             <h3>Rent</h3> 
               <input 
                  onKeyPress={(event) => {
@@ -85,8 +84,7 @@ class InputFields extends React.Component {
                     event.preventDefault();
                   }
                 }}
-                type="number" name="saving" placeholder="Saving" onChange={this.props.handleChange}/>
-            </div>
+                className={"input-fields"} type="number" name="saving" placeholder="Saving" onChange={this.props.handleChange}/>
           </form>
         )
       }

@@ -6,17 +6,17 @@ class PieChart extends React.Component {
     render(){
       const data = [
         ["Budget", "Cost"],
-        ["Rent", this.props.rent],
-        ["Car", this.props.car],
-        ["Loans", this.props.loans],
-        ["Utilities", this.props.utilites],
-        ["Giving", this.props.giving],
-        ["Gas", this.props.gas],
-        ["Groceries", this.props.groceries],
-        ["Car Maintainance", this.props.carMaintainance],
-        ["Miscilanious", this.props.miscilanious],
-        ["Personal Spending", this.props.personalSpending],
-        ["Saving", this.props.saving],
+        ["Rent", this.props.data.rent],
+        ["Car", this.props.data.car],
+        ["Loans", this.props.data.loans],
+        ["Utilities", this.props.data.utilites],
+        ["Giving", this.props.data.giving],
+        ["Gas", this.props.data.gas],
+        ["Groceries", this.props.data.groceries],
+        ["Car Maintainance", this.props.data.carMaintainance],
+        ["Miscilanious", this.props.data.miscilanious],
+        ["Personal Spending", this.props.data.personalSpending],
+        ["Saving", this.props.data.saving],
       ]
       const options = {
         title: "Monthly Budget",

@@ -1,8 +1,8 @@
 import './App.css';
 import React from 'react';
-import TotalsCard from './components/TotalsCard';
+import IncomeCard from './components/IncomeCard';
 import PieChart from './components/PieChart';
-import Card from './components/Card';
+import InputCard from './components/InputCard';
 import Header from './components/Header';
 
 
@@ -32,7 +32,7 @@ import Header from './components/Header';
     }
 
   handleChange = (e) => {
-    if(e.target.value === ""){
+    if(e.target.value === "" || e.target.value < 0){
       const key = [e.target.name]
       this.setState({
         [key]: parseInt(0),
@@ -48,42 +48,27 @@ import Header from './components/Header';
     render(){
       return (
         <div className="App">
-          <Header/>
-            <div className={"totals-card"}>
-              <TotalsCard
-                totalIncome={this.state.totalIncome}
-                handleChange={this.handleChange}
-                notAccountedFor={this.state.notAccountedFor}
+          <div className={"header"}>
+            <Header/>
+          </div>
+          <div className={"income-card"}>
+            <IncomeCard
+              totalIncome={this.state.totalIncome}
+              handleChange={this.handleChange}
+              notAccountedFor={this.state.notAccountedFor}
               />
-            </div>
-            <div className={"display-card"}>
-              <PieChart
-                rent={this.state.rent}
-                loans={this.state.loans}
-                utilites={this.state.utilites}
-                giving={this.state.giving}
-                gas={this.state.gas}
-                groceries={this.state.groceries}
-                carMaintainance={this.state.carMaintainance}
-                miscilanious={this.state.miscilanious}
-                personalSpending={this.state.personalSpending}
-                saving={this.state.saving}
-              />
-             </div>
-              <Card
-                rent={this.state.rent}
-                loans={this.state.loans}
-                utilites={this.state.utilites}
-                giving={this.state.giving}
-                gas={this.state.gas}
-                groceries={this.state.groceries}
-                carMaintainance={this.state.carMaintainance}
-                miscilanious={this.state.miscilanious}
-                personalSpending={this.state.personalSpending}
-                saving={this.state.saving}
-                handleChange={this.handleChange}
-              />
-        </div>
+          </div>
+          <div className={"input-card"}>
+          <InputCard
+            handleChange={this.handleChange}
+            />
+          </div>
+          <div className={"display-card"}>
+          <PieChart
+            data={this.state}
+          />
+          </div>
+          </div>
   );
 }
 }

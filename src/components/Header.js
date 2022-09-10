@@ -4,7 +4,7 @@ import '../App.css';
 class Header extends React.Component {
     render(){
       return(
-        <div className={"header"}>
+        <div>
             <h1 className={"header-txt"}>
               Budget Visulizer
             </h1>
