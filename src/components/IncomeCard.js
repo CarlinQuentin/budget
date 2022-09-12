@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-class IncomeCard extends React.Component {
+class TotalsCard extends React.Component {
     render(){
       return(
           <div className={"totals-content"}>
@@ -19,4 +19,4 @@ class IncomeCard extends React.Component {
       )
     }
   }
-export default IncomeCard;
+export default TotalsCard;
