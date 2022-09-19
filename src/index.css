@@ -147,30 +147,6 @@ code {
     width: 90vw;
   }
 }
-@media screen and (min-height:700px){
-  .income-card{
-    margin-top: 10%;
-  }
-  .input-card {
-    margin-top: 10%;
-  }
-  .display-card{
-    margin-top: 35%;
-  }
-}
-@media screen and (min-height:1000px){
-  .income-card{
-    margin-top: 20%;
-    height: 20%;
-  }
-  .input-card {
-    margin-top: 20%;
-    height: 100%
-  }
-  .display-card{
-    margin-top: 55%;
-    height: 50%;
-  }
-}
+
 
 
