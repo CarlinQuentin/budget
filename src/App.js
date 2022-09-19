@@ -10,6 +10,7 @@ import Header from './components/Header';
     constructor(props) {
       super(props)
       this.state = {
+        totalSpent: 0,
         notAccountedFor: 0,
         totalIncome: 0,
         rent: 0,
@@ -29,6 +30,12 @@ import Header from './components/Header';
   updateNotAccountedFor = () => {
       this.setState({
         notAccountedFor: this.state.totalIncome - this.state.rent - this.state.carInsurance - this.state.loans - this.state.utilites - this.state.giving - this.state.gas - this.state.groceries - this.state.carMaintainance - this.state.miscilanious - this.state.personalSpending - this.state.saving 
+      }, this.totalSpent)
+    }
+
+  totalSpent = () => {
+      this.setState({
+        totalSpent: this.state.rent + this.state.carInsurance + this.state.loans + this.state.utilites + this.state.giving + this.state.gas + this.state.groceries + this.state.carMaintainance + this.state.miscilanious + this.state.personalSpending + this.state.saving 
       })
     }
 
@@ -57,6 +64,7 @@ import Header from './components/Header';
               totalIncome={this.state.totalIncome}
               handleChange={this.handleChange}
               notAccountedFor={this.state.notAccountedFor}
+              totalSpent={this.state.totalSpent}
               />
           </div>
           <div className={"input-card"}>

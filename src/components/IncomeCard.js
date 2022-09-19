@@ -15,6 +15,7 @@ class TotalsCard extends React.Component {
            type="number" name="totalIncome" placeholder="Income" onChange={this.props.handleChange}/>
             <h4>Monthly Income : ${this.props.totalIncome}</h4>
             <h4>Not Accounted For : ${this.props.notAccountedFor}</h4>
+            <h4>Total Spent : ${this.props.totalSpent}</h4>
           </div>
       )
     }
