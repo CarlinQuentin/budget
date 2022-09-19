@@ -13,6 +13,7 @@ import Header from './components/Header';
         notAccountedFor: 0,
         totalIncome: 0,
         rent: 0,
+        carInsurance: 0,
         loans: 0,
         utilites: 0,
         giving: 0,
@@ -27,7 +28,7 @@ import Header from './components/Header';
 
   updateNotAccountedFor = () => {
       this.setState({
-        notAccountedFor: this.state.totalIncome - this.state.rent - this.state.loans - this.state.utilites - this.state.giving - this.state.gas - this.state.groceries - this.state.carMaintainance - this.state.miscilanious - this.state.personalSpending - this.state.saving 
+        notAccountedFor: this.state.totalIncome - this.state.rent - this.state.carInsurance - this.state.loans - this.state.utilites - this.state.giving - this.state.gas - this.state.groceries - this.state.carMaintainance - this.state.miscilanious - this.state.personalSpending - this.state.saving 
       })
     }
 

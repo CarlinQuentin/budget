@@ -7,7 +7,7 @@ class PieChart extends React.Component {
       const data = [
         ["Budget", "Cost"],
         ["Rent", this.props.data.rent],
-        ["Car", this.props.data.car],
+        ["Car Insurance", this.props.data.carInsurance],
         ["Loans", this.props.data.loans],
         ["Utilities", this.props.data.utilites],
         ["Giving", this.props.data.giving],

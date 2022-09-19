@@ -13,6 +13,14 @@ class InputFields extends React.Component {
                   }
                 }}
             type="number" name="rent" placeholder="Rent" onChange={this.props.handleChange}/>
+            <h3>Car Insurance</h3> 
+              <input 
+                 onKeyPress={(event) => {
+                  if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+            type="number" name="carInsurance" placeholder="Car Insurance" onChange={this.props.handleChange}/>
             <h3>Loans</h3>
                <input
                   onKeyPress={(event) => {
