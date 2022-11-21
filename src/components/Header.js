@@ -6,7 +6,7 @@ class Header extends React.Component {
       return(
         <div>
             <h1 className={"header-txt"}>
-              Budget Visulizer
+              Cash Over Cash
             </h1>
         </div>
       )
