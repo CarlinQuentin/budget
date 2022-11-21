@@ -1,8 +1,8 @@
 {
-  "name": "cash-over-cash",
+  "name": "budget-visualizer",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://carlinquentin.github.io/cash-over-cash/",
+  "homepage": "https://carlinquentin.github.io/budget-visualizer/",
   "dependencies": {
     "@progress/kendo-drawing": "^1.17.1",
     "@progress/kendo-licensing": "^1.2.2",
